@@ -1,0 +1,31 @@
+GET http://localhost:3000/izvestaj
+
+###
+
+GET http://localhost:3000/izvestaj/1
+
+###
+
+DELETE http://localhost:7150/zaposleni/4
+
+###
+
+POST http://localhost:3000/izvestaj
+Content-Type: application/json
+
+{
+    "fiskalnaGodina": 2016,
+    "datumDonosenjaOdluke": "12-Dec-2016",
+    "datumStanjaNaDan": "27-Nov-2016",
+    "iznos": 1666000.5,
+    "vlasnik": "Milena Petrovic"
+}
+
+###
+
+PATCH http://localhost:3000/izvestaj/5f00cc1242c759453cc08f56
+Content-Type: application/json
+
+{
+    "iznos":10.6
+}

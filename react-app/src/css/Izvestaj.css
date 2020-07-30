@@ -1,0 +1,31 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0;
+  text-align: center;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    text-align: center;
+}
+
+.izvestajPage {
+  margin: 2% 5% 2% 5%;
+}
+
+.izvestajForm {
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkBoxSacuvaj {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.imePrezime {
+  margin-top: 1%;
+}

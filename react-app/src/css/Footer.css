@@ -1,0 +1,21 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 10vh;
+    background-color: rgb(65, 79, 83);
+    color: white;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.home h1 {
+    font-weight: normal;
+    color: rgb(65, 79, 83);
+}
