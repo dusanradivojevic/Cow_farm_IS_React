@@ -3,7 +3,7 @@ Veb aplikacija koja predstavlja implementaciju dela informacionog sistema farme 
 
 ## Opis
 Aplikacija je kreirana u okviru predmeta Fizičko projektovanje informacionog sistema na katedri za informaciono inženjerstvo na Fakultetu organizacionih nauka u Beogradu.<br/><br/>
-Implementaciji je prethodila iznimna analiza i projektovanje informacionog sistema za konkretnu farmu rađena na drugom predmetu.
+Implementaciji je prethodila detaljna analiza i projektovanje informacionog sistema za konkretnu farmu rađena na drugom predmetu.
 
 ## Implementacija
 Delovi sistema obuhvaćeni ovom aplikacijom jesu kreiranje i ažuriranje prijemnice za krave i obrada godišnjeg finansijskog izveštaja.<br/><br/>
