@@ -8,7 +8,7 @@ Implementation was preceded by a detailed analysis and modeling of information s
 ## Implementation
 Functionalities that this appliaction implements are creation and update of both receiving documents for cow and annual financial report.<br/><br/>
 **Frontend:** React framework with the "material-ui" library used for GUI designing.<br/><br/>
-**Backend:** Web API implemented using Node JS with Express library. <br/>Technique for *load balancing* is simulated within this project. Specifically, request-id of network request is used as a parameter for several hash functions that are used for assigning clients to different servers.br/><br/>
+**Backend:** Web API implemented using Node JS with Express library. <br/>Technique for *load balancing* is simulated within this project. Specifically, request-id of network request is used as a parameter for several hash functions that are used for assigning clients to different servers.<br/><br/>
 NoSQL database is used, particularly MongoDB with which Web API communicates using Mongoose library.
 
 ## Technologies used
