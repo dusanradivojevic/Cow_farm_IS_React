@@ -1,18 +1,17 @@
-# Farma krava
-Veb aplikacija koja predstavlja implementaciju dela informacionog sistema farme krava.
+# Cow farm
+Web application that implements part of functionalities of information system of cow farm.
 
-## Opis
-Aplikacija je kreirana u okviru predmeta Fizičko projektovanje informacionog sistema na katedri za informaciono inženjerstvo na Fakultetu organizacionih nauka u Beogradu.<br/><br/>
-Implementaciji je prethodila detaljna analiza i projektovanje informacionog sistema za konkretnu farmu rađena na drugom predmetu.
+## Description
+Application is created within subject named Physical implementation of information system at Information engineering department of Faculty of Organizational Sciences in Belgrade. <br/><br/>
+Implementation was preceded by a detailed analysis and modeling of information system of specific cow farm.
 
-## Implementacija
-Delovi sistema obuhvaćeni ovom aplikacijom jesu kreiranje i ažuriranje prijemnice za krave i obrada godišnjeg finansijskog izveštaja.<br/><br/>
-**Frontend:** React framework uz korišćenje biblioteke "material-ui" za dizajniranje elemenata korisničkog interfejsa.<br/><br/>
-**Backend:** API napisan u Node JS-u sa Express bibliotekom. <br/>Urađena je i simulacija raspoređivanja tereta (load balancing) korišćenjem heš funkcija nad identifikatorom korisničkog zahteva (request-id) u slučaju postojanja više paralelnih servera.<br/><br/>
-Za skladište podataka korišćena je NoSQL baza podataka, konkretno MongoDB sa kojom je API komunicirao uz pomoć "mongoose" biblioteke.
+## Implementation
+Functionalities that this appliaction implements are creation and update of both receiving documents for cow and annual financial report.<br/><br/>
+**Frontend:** React framework with the "material-ui" library used for GUI designing.<br/><br/>
+**Backend:** Web API implemented using Node JS with Express library. <br/>Technique for *load balancing* is simulated within this project. Specifically, request-id of network request is used as a parameter for several hash functions that are used for assigning clients to different servers.br/><br/>
+NoSQL database is used, particularly MongoDB with which Web API communicates using Mongoose library.
 
-
-## Korišćene tehnologije
+## Technologies used
 <ul>
   <li>Visual Studio Code</li>
   <li>MongoDB Atlas</li>
@@ -20,5 +19,5 @@ Za skladište podataka korišćena je NoSQL baza podataka, konkretno MongoDB sa 
   <li>Node.js & Express</li>  
 </ul>
 
-## Dodatno
-Slike aplikacije možete pogledati [ovde](Slike_aplikacije/).
+## Furthermore
+Application images can be seen [here](Slike_aplikacije/).
