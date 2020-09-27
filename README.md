@@ -21,4 +21,4 @@ NoSQL database is used, particularly MongoDB with which Web API communicates usi
 
 ## Furthermore
 Application images can be seen [here](Slike_aplikacije/). <br/>
-Integrated project is hosted on Heroku and can be accessed by clicking on the [link](https://cow-farm.herokuapp.com/izvestaj).
+Integrated project is hosted on Heroku and can be accessed by clicking on the [link](https://cow-farm.herokuapp.com).
