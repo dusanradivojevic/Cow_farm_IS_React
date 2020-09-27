@@ -20,24 +20,35 @@ db.once("open", () => console.log("Connected to database successfully."));
 // middleware
 app.use(express.json()); // omogucava prihvatanje json-a
 app.use(cors());
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+);
 app.use(requestID());
+
+app.use(express.static(path.join(__dirname, "../react-app/build")));
+
+// pokretanje react klijentske aplikacije
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../react-app/build/index.html"));
+});
 
 // rutiranje godisnjeg finansijskog izvestaja
 const izvestajRuter = require("./routes/izvestaj");
-app.use("/izvestaj", izvestajRuter);
+app.use("/api/izvestaj", izvestajRuter);
 
 // rutiranje otpremnice
 const otpremnicaRuter = require("./routes/otpremnica");
-app.use("/otpremnica", otpremnicaRuter);
+app.use("/api/otpremnica", otpremnicaRuter);
 
 // rutiranje prijemnice
 const prijemnicaRuter = require("./routes/prijemnica");
-app.use("/prijemnica", prijemnicaRuter);
+app.use("/api/prijemnica", prijemnicaRuter);
 
 // rutiranje zaposlenih
 const zaposleniRuter = require("./routes/zaposleni");
-app.use("/zaposleni", zaposleniRuter);
+app.use("/api/zaposleni", zaposleniRuter);
 
 const port = process.env.PORT || 7150;
 app.listen(port, () => console.log(`Server started on port ${port}`));

@@ -51,7 +51,7 @@ class Izvestaj extends React.Component {
   }
 
   ucitajSveIzvestaje = () => {
-    fetch(`/izvestaj`)
+    fetch(`/api/izvestaj`)
       .then((response) => response.json())
       .then((response) => {
         let svi = [];
@@ -63,7 +63,7 @@ class Izvestaj extends React.Component {
   };
 
   ucitajIzvestaj = (id) => {
-    fetch(`/izvestaj/${id}`)
+    fetch(`/api/izvestaj/${id}`)
       .then((response) => response.json())
       .then((response) => {
         const izvestaj = response;
@@ -156,7 +156,7 @@ class Izvestaj extends React.Component {
 
     // Ukoliko je cekirana opcija za kreiranje novog izvestaja
     if (izvestaj.check) {
-      path = `/izvestaj`;
+      path = `/api/izvestaj`;
       requestOptions = {
         method: "POST",
         headers: myHeaders,
@@ -176,7 +176,7 @@ class Izvestaj extends React.Component {
         );
       }
       // Patch request
-      path = `/izvestaj/${izvestaj.id}`;
+      path = `/api/izvestaj/${izvestaj.id}`;
       requestOptions = {
         method: "PATCH",
         headers: myHeaders,
@@ -214,7 +214,7 @@ class Izvestaj extends React.Component {
       redirect: "follow",
     };
 
-    let path = `/izvestaj/${izvestaj.id}`;
+    let path = `/api/izvestaj/${izvestaj.id}`;
 
     fetch(path, requestOptions)
       .then((response) => response.json())

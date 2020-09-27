@@ -113,7 +113,7 @@ function PrijemnicaIzmeni() {
       return;
     }
 
-    fetch(`/otpremnica/${brojOtpremnice}`)
+    fetch(`/api/otpremnica/${brojOtpremnice}`)
       .then((response) => response.json())
       .then((result) => {
         if (result.length !== 0) {
@@ -133,7 +133,7 @@ function PrijemnicaIzmeni() {
       return;
     }
 
-    fetch(`/prijemnica/${brojPrijemnice}`)
+    fetch(`/api/prijemnica/${brojPrijemnice}`)
       .then((response) => response.json())
       .then((result) => {
         if (result.length !== 0) {
@@ -164,7 +164,7 @@ function PrijemnicaIzmeni() {
       return;
     }
 
-    fetch(`/zaposleni/${sifraZap}`)
+    fetch(`/api/zaposleni/${sifraZap}`)
       .then((response) => response.json())
       .then((result) => {
         if (result.length !== 0) {
@@ -335,7 +335,7 @@ function PrijemnicaIzmeni() {
       redirect: "follow",
     };
 
-    fetch(`/prijemnica/${brojPrijemnice}`, requestOptions)
+    fetch(`/api/prijemnica/${brojPrijemnice}`, requestOptions)
       .then((response) => response.json())
       .then((result) => openModal(result.message, "success"))
       .catch(() => openModal("Neuspešno ažuriranje prijemnice!", "error"));
