@@ -2,9 +2,14 @@
   "name": "fpis-projekat",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "build": "cd ../react-app && npm run build",
+    "install-client": "cd ../react-app && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node server.js",
+    "client": "cd ../react-app && npm start"
   },
   "author": "",
   "license": "ISC",
