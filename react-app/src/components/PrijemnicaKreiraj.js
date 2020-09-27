@@ -16,7 +16,6 @@ import Paper from '@material-ui/core/Paper';
 import DeleteIcon from '@material-ui/icons/Delete';
 import IconButton from '@material-ui/core/IconButton';
 import Checkbox from '@material-ui/core/Checkbox';
-import api_path from '../env';
 
 const useStyles = makeStyles((theme) => ({
     textField: {
@@ -109,7 +108,7 @@ function PrijemnicaKreiraj() {
             return;
         }
 
-        fetch(`${api_path}/otpremnica/${brojOtpremnice}`)
+        fetch(`/otpremnica/${brojOtpremnice}`)
         .then(response => response.json())
         .then(result => {
             if (result.length !== 0){
@@ -226,7 +225,7 @@ function PrijemnicaKreiraj() {
             return;
         }
 
-        fetch(`${api_path}/zaposleni/${sifraZap}`)
+        fetch(`/zaposleni/${sifraZap}`)
         .then(response => response.json())
         .then(result => {
             if (result.length !== 0){
@@ -249,7 +248,7 @@ function PrijemnicaKreiraj() {
             return {status : "err", message : "Unesite broj prijemnice!"}
         }
 
-        fetch(`${api_path}/prijemnica/${broj}`)
+        fetch(`/prijemnica/${broj}`)
         .then(response => response.json())
         .then(result => {
             if(result.length > 0) {
@@ -329,7 +328,7 @@ function PrijemnicaKreiraj() {
             redirect: 'follow'
         };
 
-        fetch(`${api_path}/prijemnica`, requestOptions)
+        fetch(`/prijemnica`, requestOptions)
         .then(response => response.json())
         .then(result => openModal(result.message, 'success'))
         .catch(() => openModal("Neuspešno čuvanje prijemnice!", 'error'));
