@@ -15,7 +15,7 @@
     "dotenv": "^8.2.0",
     "env": "0.0.2",
     "env-cmd": "^10.1.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-calendar": "^3.1.0",
     "react-dom": "^16.13.1",
